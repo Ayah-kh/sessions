@@ -9,5 +9,12 @@ public interface MyIntFunction {
     default MyIntFunction compose(MyIntFunction before){
         return a->apply(before.apply(a));
     }
+    default MyIntFunction compose2(MyIntFunction before){
+        return a-> {
+            Integer applyFirst = before.apply(a);
+            return apply(applyFirst);
+        };
+        }
+    }
 
-}
+
