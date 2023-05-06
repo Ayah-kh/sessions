@@ -24,5 +24,12 @@ public class Application {
         MyIntFunction compose = addFive2.compose(multBy5);
         System.out.println("compose.  apply(4) = " + compose.apply(4));
 
+        MyFunction<String,String> greeting=a->"Hello "+a;
+        MyFunction<String,String> toCaps=a->a.toUpperCase();
+        MyFunction<String, String> compose1 = greeting.compose(toCaps);
+        System.out.println("compose1.apply(\"Hello\") = " + compose1.apply("Hello"));
+        MyFunction<String, String> compose2 = toCaps.compose(greeting);
+        System.out.println("compose2.apply(\"yasmeen\") = " + compose2.apply("yasmeen"));
+
     }
 }
