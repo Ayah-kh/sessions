@@ -13,7 +13,16 @@ public class Application {
     }
     public static void main(String[] args) {
         AddFive addFive=new AddFive();
-        System.out.println("addFive.apply(10) = " + addFive.apply(10));
+        System.out.println("addFive. apply(10) = " + addFive.apply(10));
+
+        MyIntFunction addFive2= a->a+5;
+        System.out.println("addFive2.apply(10) = " + addFive2.apply(10));
+
+        MyIntFunction multBy5=a->a*5;
+        System.out.println("multBy5. apply(10) = " + multBy5.apply(10));
+
+        MyIntFunction compose = addFive2.compose(multBy5);
+        System.out.println("compose.  apply(4) = " + compose.apply(4));
 
     }
 }
