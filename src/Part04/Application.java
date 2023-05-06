@@ -31,5 +31,11 @@ public class Application {
         MyFunction<String, String> compose2 = toCaps.compose(greeting);
         System.out.println("compose2.apply(\"yasmeen\") = " + compose2.apply("yasmeen"));
 
+        User mohammed=new User("Mohammed");
+
+        MyFunction<User,String> getname=u->u.getName();
+        MyFunction<User, String> compose3 = greeting.compose(getname);
+        System.out.println("compose3.apply(mohammed) = " + compose3.apply(mohammed));
+
     }
 }
