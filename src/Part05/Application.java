@@ -15,5 +15,19 @@ public class Application {
         MyBiFunction<Integer,String,String> value=(a,b)->b+a;
         System.out.println("value.apply(3,\"My value is \") = " + value.apply(3, "My value is "));
 
+        MyCurBiFunction<Integer,Integer,Integer> addCur=
+        a->b->a+b;
+        System.out.println("addCur.apply(3).apply(4) = " + addCur.apply(3).apply(4));
+        MyFunction<Integer, Integer> add1 = addCur.apply(3);
+        System.out.println("add1.apply(4) = " + add1.apply(4));
+
+    }
+
+    static  class Add implements MyCurBiFunction<Integer,Integer,Integer>{
+
+        @Override
+        public MyFunction<Integer, Integer> apply(Integer integer) {
+            return null;
+        }
     }
 }
