@@ -20,14 +20,21 @@ public class Application {
         System.out.println("addCur.apply(3).apply(4) = " + addCur.apply(3).apply(4));
         MyFunction<Integer, Integer> add1 = addCur.apply(3);
         System.out.println("add1.apply(4) = " + add1.apply(4));
+        MyCurBiFunction<Integer, Integer, Integer> add3 = convert(add);
+        System.out.println("add3.apply(4).apply(5) = " + add3.apply(4).apply(5));
 
+    }
+
+
+    static <T,U,V> MyCurBiFunction<T,U,V> convert (MyBiFunction<T,U,V> biFunction){
+        return a->b->biFunction.apply(a,b);
     }
 
     static  class Add implements MyCurBiFunction<Integer,Integer,Integer>{
 
         @Override
-        public MyFunction<Integer, Integer> apply(Integer integer) {
-            return null;
+        public MyFunction<Integer, Integer> apply(Integer a) {
+            return b->a+b;
         }
     }
 }
