@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a512523b-c4f3-4868-8774-1977048c9cea" name="Changes" comment="First Commit">
-      <change beforePath="$PROJECT_DIR$/src/Part05/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Part05/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Part05/MyConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Part05/MyPredicate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,8 +14,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -197,7 +199,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683442709301</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="First Commit">
+      <created>1683443282507</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1683443282507</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
