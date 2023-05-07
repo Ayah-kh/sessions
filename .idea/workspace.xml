@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a512523b-c4f3-4868-8774-1977048c9cea" name="Changes" comment="First Commit">
-      <change afterPath="$PROJECT_DIR$/src/Part04/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Part05/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Part05/MyBiFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Part04/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Part04/Application.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +44,7 @@
       <recent name="Part04" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Part04.Application">
+  <component name="RunManager" selected="Application.Part05.Application">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Part2.Application" />
       <module name="session10" />
@@ -81,6 +84,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Part05.Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Part05.Application" />
+      <module name="session10" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Part05.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="part1.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="part1.Main" />
       <module name="session10" />
@@ -90,6 +106,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Part05.Application" />
         <item itemvalue="Application.Part04.Application" />
         <item itemvalue="Application.Application" />
         <item itemvalue="Application.Main" />
@@ -155,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683393318639</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="First Commit">
+      <created>1683393579910</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1683393579910</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

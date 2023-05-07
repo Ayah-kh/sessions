@@ -37,5 +37,6 @@ public class Application {
         MyFunction<User, String> compose3 = greeting.compose(getname);
         System.out.println("compose3.apply(mohammed) = " + compose3.apply(mohammed));
 
+
     }
 }
