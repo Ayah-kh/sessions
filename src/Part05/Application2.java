@@ -1,5 +1,6 @@
 package Part05;
 
+import Part06.IntOperation;
 import Part06.StringOperation;
 
 import java.util.ArrayList;
@@ -14,5 +15,12 @@ public class Application2 {
 
         StringOperation helloMsg=a->"Hello "+a;
         System.out.println("helloMsg.apply(\"Ayah\") = " + helloMsg.apply("Ayah"));
+
+        Operation<String> operation=a-> System.out.println(a);
+
+        IntOperation add5=a->a+5;
+        IntOperation mult10=a->a*10;
+
+
     }
 }
