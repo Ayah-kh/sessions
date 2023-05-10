@@ -6,7 +6,7 @@ import java.util.List;
 public class Application2 {
     public static void main(String[] args) {
 
-        Filter evenFilter= (list,predicate)-> {
+        Filter filter= (list,predicate)-> {
             List<Integer> result=new ArrayList<>();
             for (Integer i : list) {
                 if (predicate.test(i))
@@ -21,17 +21,16 @@ public class Application2 {
 //                if (integer%7==0)
 //                    result.add(integer);
 //            });
-
-            return result;
-        };
+//
+//            return result;
+//        };
 
         List<Integer> input=List.of(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15);
-        List<Integer> output= evenFilter.filter(input);
-        System.out.println("output = " + output);
+        List<Integer> evenOutput= filter.filter(input,integer -> integer%2==0);
+        System.out.println("evenOutput = " + evenOutput);
         System.out.println("+++++++++++++++++++++");
-        List<Integer> output2 = dividedBy7.filter(input);
-        System.out.println("output2 = " + output2);
-
+        List<Integer> dividedBy7=filter.filter(input,integer -> integer%7==0);
+        System.out.println("dividedBy7 = " + dividedBy7);
 
     }
 }
