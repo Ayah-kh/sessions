@@ -6,21 +6,21 @@ import java.util.List;
 public class Application2 {
     public static void main(String[] args) {
 
-        Filter evenFilter= list -> {
+        Filter evenFilter= (list,predicate)-> {
             List<Integer> result=new ArrayList<>();
             for (Integer i : list) {
-                if (i%2==0)
+                if (predicate.test(i))
                     result.add(i);
             }
             return result;
         };
 
-        Filter dividedBy7=list -> {
-            List<Integer> result=new ArrayList<>();
-            list.forEach(integer -> {
-                if (integer%7==0)
-                    result.add(integer);
-            });
+//        Filter dividedBy7=list -> {
+//            List<Integer> result=new ArrayList<>();
+//            list.forEach(integer -> {
+//                if (integer%7==0)
+//                    result.add(integer);
+//            });
 
             return result;
         };
