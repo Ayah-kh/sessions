@@ -1,28 +1,18 @@
 package Part05;
 
+import Part06.StringOperation;
+
 import java.util.ArrayList;
 
 public class Application2 {
     public static void main(String[] args) {
-        Integer[] arr = {1, 2, 3, 4, 5, 6, 8, 9, 7, 2, 33, 12, 5, 4};
-        Iteration.forEach(arr,i-> System.out.println(i));
+        StringOperation toUpper=a->a.toUpperCase();
+        System.out.println("toUpper.apply(\"Hello\") = " + toUpper.apply("Hello"));
 
+        StringOperation toLower=a->a.toLowerCase();
+        System.out.println("toLower.apply(\"HELLO\") = " + toLower.apply("HELLO"));
 
-    }
-}
-class PrintOperation implements Operation{
-
-    @Override
-    public void doOperation(Object o) {
-        System.out.println("Operation implemented "+o);
-    }
-}
-class ToArrayListOperation implements Operation{
-    ArrayList<Object> data=new ArrayList<>();
-
-
-    @Override
-    public void doOperation(Object o) {
-        data.add(o);
+        StringOperation helloMsg=a->"Hello "+a;
+        System.out.println("helloMsg.apply(\"Ayah\") = " + helloMsg.apply("Ayah"));
     }
 }
