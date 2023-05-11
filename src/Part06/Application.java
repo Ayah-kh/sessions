@@ -48,6 +48,11 @@ public class Application {
         System.out.println(salaryGT1000.test(mohammed));
         System.out.println("nameStartWithA.test(ahmad) = " + nameStartWithA.test(ahmad));
 
+        MyConsumer<User> printUser=user -> System.out.println(user.getName());
+        printUser.apply(mohammed);
+
+        Supplier<String> greetingMsg=()->"Hello";
+
 
     }
 
