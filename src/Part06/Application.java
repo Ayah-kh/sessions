@@ -31,6 +31,8 @@ public class Application {
         IntPredicate isOdd=a->a%2!=0;
         System.out.println(isOdd.test(10));
 
+        IntPredicate dividableBy7= a -> a%7!=0;
+        System.out.println("dividableBy7.test(15) = " + dividableBy7.test(15));
 
 
     }
