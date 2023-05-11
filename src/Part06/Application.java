@@ -21,6 +21,16 @@ public class Application {
         MyFunction<String,Integer> compose2=(strLength= String::length).compose(s -> "Hello "+s);
         System.out.println("compose.apply(\"Heeelo\") = " + compose.apply("Heeelo"));
 
+        IntOperation add5 = a -> a + 5;
+        IntOperation mult10 = a -> a * 10;
+
+        IntPredicate isEven = a -> a % 2== 0;
+        System.out.println("isEven.test(10) = " + isEven.test(10));
+        System.out.println("isEven.test(1) = " + isEven.test(1));
+
+        IntPredicate isOdd=a->a%2!=0;
+        System.out.println(isOdd.test(10));
+
 
 
     }

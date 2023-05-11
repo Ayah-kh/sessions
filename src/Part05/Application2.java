@@ -17,12 +17,7 @@ public class Application2 {
 
         Operation<String> operation = a -> System.out.println(a);
 
-        IntOperation add5 = a -> a + 5;
-        IntOperation mult10 = a -> a * 10;
 
-        IntPredicate isEven = a -> a % 2== 0;
-        System.out.println("isEven.test(10) = " + isEven.test(10));
-        System.out.println("isEven.test(1) = " + isEven.test(1));
 
 
     }
