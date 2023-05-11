@@ -1,5 +1,7 @@
 package Part06;
 
+import java.util.function.Predicate;
+
 public class Application {
     public static void main(String[] args) {
         MyFunction<String, String> helloMsg = a -> "Hello " + a;
@@ -33,6 +35,18 @@ public class Application {
 
         IntPredicate dividableBy7= a -> a%7!=0;
         System.out.println("dividableBy7.test(15) = " + dividableBy7.test(15));
+
+        Predicate<Integer> isEven2=a->a%2==0;
+        Predicate<String> startWithA=a->a.startsWith("a");
+
+        Predicate<User> salaryGT1000=user -> user.getSalary()>1000;
+        Predicate<User> nameStartWithA=user -> user.getName().startsWith("A");
+
+        User mohammed = new User("1", "Mohammed", 40, 900);
+        User ahmad = new User("2", "Ahmad", 30, 1200);
+
+        System.out.println(salaryGT1000.test(mohammed));
+        System.out.println("nameStartWithA.test(ahmad) = " + nameStartWithA.test(ahmad));
 
 
     }
