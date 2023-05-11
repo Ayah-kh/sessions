@@ -13,6 +13,15 @@ public class Application {
         MyFunction<String,Integer> strLength=a->a.length();
         System.out.println("strLength.apply(\"Mohammed\") = " + strLength.apply("Mohammed"));
 
+        int num2=inc.apply(strLength.apply("HELLO wo"));
+        System.out.println("num2 = " + num2);
+
+        MyFunction<String, Integer> compose = strLength.compose(helloMsg);
+
+        MyFunction<String,Integer> compose2=(strLength=a->a.length()).compose(s -> "Hello "+s);
+        System.out.println("compose.apply(\"Heeelo\") = " + compose.apply("Heeelo"));
+
+
 
     }
 
