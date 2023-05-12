@@ -57,6 +57,16 @@ public class Main {
                         person -> person));
         System.out.println("collect1 = " + collect1);
 
+        System.out.println("==========================");
+
+
+        Map<String,List<Person>> map=people.stream()
+                .collect(Collectors.groupingBy(Person::getName));
+        Map<Gender, List<Person>> map1 = people.stream()
+                .collect(Collectors.groupingBy(Person::getGender));
+
+        System.out.println("map = " + map1);
+
 
     }
 }
