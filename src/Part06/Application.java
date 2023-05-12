@@ -61,6 +61,9 @@ public class Application {
         CBiFunction<Integer,Integer,Integer> cAdd=a->b->a+b;
         System.out.println("cAdd.apply(1).apply(3) = " + cAdd.apply(1).apply(3));
 
+        MyFunction<Integer, Integer> partialApply = cAdd.apply(5);
+        Integer apply = partialApply.apply(6);
+        System.out.println(apply);
 
 
     }
