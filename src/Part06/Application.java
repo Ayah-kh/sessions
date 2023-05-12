@@ -55,6 +55,14 @@ public class Application {
         MyPredicate<User> notGT1000 = salaryGT1000.not();
         System.out.println(notGT1000.test(mohammed));
 
+        MyBiFunction<Integer,Integer,Integer> add=(a,b)->a+b;
+        System.out.println("add.apply(1,3) = " + add.apply(1, 3));
+
+        CBiFunction<Integer,Integer,Integer> cAdd=a->b->a+b;
+        System.out.println("cAdd.apply(1).apply(3) = " + cAdd.apply(1).apply(3));
+
+
+
     }
 
 
