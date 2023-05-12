@@ -1,5 +1,6 @@
 package Part06;
 
+import java.util.function.Function;
 import java.util.function.Predicate;
 
 public class Application {
@@ -64,6 +65,23 @@ public class Application {
         MyFunction<Integer, Integer> partialApply = cAdd.apply(5);
         Integer apply = partialApply.apply(6);
         System.out.println(apply);
+
+        CBiFunction<Integer,Integer,Double> itemPriceWithTax=tax->itemPrice->itemPrice+(double)(itemPrice*tax)/100;
+        System.out.println("itemPriceWithTax.apply(16).apply(100) = " + itemPriceWithTax.apply(16).apply(100));
+        MyFunction<Integer, Double> netPriceInJordan = itemPriceWithTax.apply(16);
+        System.out.println("netPrice.apply(100) = " + netPriceInJordan.apply(100));
+        System.out.println("netPrice.apply(50) = " + netPriceInJordan.apply(50));
+        MyFunction<Integer, Double> netPriceInSuadi = itemPriceWithTax.apply(3);
+        System.out.println("netPriceInSuadi.apply(100) = " + netPriceInSuadi.apply(100));
+        System.out.println("netPriceInSuadi.apply(50) = " + netPriceInSuadi.apply(50));
+
+        CBiFunction<Integer, Integer, Double> flipped = itemPriceWithTax.flipParameters();
+        System.out.println("itemPriceWithTax.apply(100).apply(16) = " + flipped.apply(100).apply(16));
+
+        MyFunction<Integer,MyFunction<Integer,Integer>> add3=a->b->a+b;
+
+        MyFunction<Integer, MyFunction<Integer,MyFunction<Integer,Integer>>> function=a->b->c->a+b+c;
+
 
 
     }

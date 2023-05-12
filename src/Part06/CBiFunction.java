@@ -4,4 +4,8 @@ package Part06;
 public interface CBiFunction<T,U,V> extends MyFunction<T,MyFunction<U,V>>{
 
 //MyFunction<U,V> apply(T t)
+
+    default CBiFunction<U,T,V> flipParameters(){
+        return u -> t -> apply(t).apply(u);
+    }
 }
