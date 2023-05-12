@@ -52,6 +52,7 @@ public class Application {
         printUser.apply(mohammed);
 
         Supplier<String> greetingMsg=()->"Hello";
+        Predicate<User> salaryGT1000AndNameA=
 
 
     }
