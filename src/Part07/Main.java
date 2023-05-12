@@ -1,8 +1,6 @@
 package Part07;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class Main {
     public static List<Person> createPeople() {
@@ -21,10 +19,16 @@ public class Main {
 
     public static void main(String[] args) {
         List<Person> people = createPeople();
-        List<String> names2= people.stream()
+        List<String> names2 = people.stream()
                 .filter(person -> person.getAge() > 18)
                 .map(Person::getName)
                 .map(String::toUpperCase).toList();
+
+        people.stream()
+                .filter(person -> person.getGender() == Gender.MALE)
+                .map(person -> new Person(person.getName().toUpperCase(),
+                        person.getGender(), person.getAge()))
+                .forEach(System.out::println);
 
 
     }

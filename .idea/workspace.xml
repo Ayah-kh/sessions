@@ -47,13 +47,13 @@
       <recent name="Part04" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Part06.Application">
-    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Part2.Application" />
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Application2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Part05.Application2" />
       <module name="session10" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Part2.*" />
+          <option name="PATTERN" value="Part05.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -61,12 +61,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Application2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Part05.Application2" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Part07.Main" />
       <module name="session10" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Part05.*" />
+          <option name="PATTERN" value="Part07.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -115,11 +115,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Part06.Application" />
         <item itemvalue="Application.Application2" />
         <item itemvalue="Application.Part05.Application" />
         <item itemvalue="Application.Part04.Application" />
-        <item itemvalue="Application.Application" />
       </list>
     </recent_temporary>
   </component>
@@ -377,7 +377,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683879535786</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="First Commit">
+      <created>1683892667409</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1683892667409</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
