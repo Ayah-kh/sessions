@@ -36,11 +36,11 @@ public class Application {
         IntPredicate dividableBy7= a -> a%7!=0;
         System.out.println("dividableBy7.test(15) = " + dividableBy7.test(15));
 
-        Predicate<Integer> isEven2=a->a%2==0;
-        Predicate<String> startWithA=a->a.startsWith("a");
+        MyPredicate<Integer> isEven2=a->a%2==0;
+        MyPredicate<String> startWithA=a->a.startsWith("a");
 
-        Predicate<User> salaryGT1000=user -> user.getSalary()>1000;
-        Predicate<User> nameStartWithA=user -> user.getName().startsWith("A");
+        MyPredicate<User> salaryGT1000=user -> user.getSalary()>1000;
+        MyPredicate<User> nameStartWithA=user -> user.getName().startsWith("A");
 
         User mohammed = new User("1", "Mohammed", 40, 900);
         User ahmad = new User("2", "Ahmad", 30, 1200);
@@ -51,9 +51,9 @@ public class Application {
         MyConsumer<User> printUser=user -> System.out.println(user.getName());
         printUser.apply(mohammed);
 
-        Supplier<String> greetingMsg=()->"Hello";
-        Predicate<User> salaryGT1000AndNameA=
-
+        MyPredicate<User> and = salaryGT1000.and(nameStartWithA);
+        MyPredicate<User> notGT1000 = salaryGT1000.not();
+        System.out.println(notGT1000.test(mohammed));
 
     }
 
