@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a512523b-c4f3-4868-8774-1977048c9cea" name="Changes" comment="First Commit">
-      <change beforePath="$PROJECT_DIR$/src/Part07/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Part07/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Part08/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Part08/Application.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,8 +14,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -46,7 +47,20 @@
       <recent name="Part04" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.Application">
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Part08.Application" />
+      <module name="session10" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Part08.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Application2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Part05.Application2" />
       <module name="session10" />
@@ -66,19 +80,6 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Part07.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Part04.Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Part04.Application" />
-      <module name="session10" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Part04.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -114,11 +115,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Application" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Part06.Application" />
         <item itemvalue="Application.Application2" />
         <item itemvalue="Application.Part05.Application" />
-        <item itemvalue="Application.Part04.Application" />
       </list>
     </recent_temporary>
   </component>
@@ -397,7 +398,21 @@
       <option name="project" value="LOCAL" />
       <updated>1683900615805</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="First Commit">
+      <created>1683902709029</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1683902709029</updated>
+    </task>
+    <task id="LOCAL-00040" summary="First Commit">
+      <created>1683903223666</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1683903223666</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

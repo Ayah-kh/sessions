@@ -1,5 +1,8 @@
 package Part08;
 
+import java.util.Arrays;
+import java.util.stream.Stream;
+
 public class Application {
     static Student[] students = new Student[]{
             Student.of("Ahmad", 20, Gender.MALE, true, Course.MATH, Course.CHEMISTRY, Course.JAVA),
@@ -10,6 +13,14 @@ public class Application {
             Student.of("RUBA", 22, Gender.FEMALE, true, Course.MATH, Course.PHYSICS)
     };
     public static void main(String[] args) {
+
+        Stream.of(students)
+                .forEach(student -> System.out.println(student));
+
+        Stream.of(students)
+                .map(student -> student.getName())
+                .forEach(System.out::println);
+
 
 }
 }
