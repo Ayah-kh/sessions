@@ -82,6 +82,8 @@ public class Application {
 
         MyFunction<Integer, MyFunction<Integer,MyFunction<Integer,Integer>>> function=a->b->c->a+b+c;
 
+        CBiFunction<Integer, Integer, Integer> convertAdd = add.convert();
+        System.out.println("convertAdd.apply(5).apply(6) = " + convertAdd.apply(5).apply(6));
 
 
     }
