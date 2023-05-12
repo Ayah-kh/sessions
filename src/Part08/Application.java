@@ -18,8 +18,17 @@ public class Application {
                 .forEach(student -> System.out.println(student));
 
         Stream.of(students)
-                .map(student -> student.getName())
+                .map(Student::getName)
                 .forEach(System.out::println);
+
+        System.out.println("=============================================");
+
+        Stream.of(students)
+                .filter(Student::isActive)
+                .forEach(System.out::println);
+
+        System.out.println("=============================================");
+
 
 
 }
