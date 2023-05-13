@@ -69,8 +69,11 @@ public class Application {
 
         int sum = IntStream.rangeClosed(1, 10)
                 .reduce(0, (acc, e) -> acc + e);
+        int sum1 = IntStream.rangeClosed(1, 10).sum();
         System.out.println("=============================================");
-        System.out.println("sum = " + sum);
+        System.out.println("sum  = " + sum);
+        System.out.println("sum1 = " + sum1);
+
 
 
 
