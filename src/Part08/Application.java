@@ -1,5 +1,6 @@
 package Part08;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -31,6 +32,25 @@ public class Application {
         List<Student> orderStudents = Stream.of(students)
                 .sorted()
                 .collect(Collectors.toList());
+        Stream.of(students)
+                .sorted(Comparator.comparingInt(Student::getAge).reversed())
+                .collect(Collectors.toList())
+                .forEach(System.out::println);
+
+        System.out.println("+++++++++++++++++++++++++++++++++++++");
+
+        List<Student> orderStudent2 = Stream.of(students)
+                .sorted((s1, s2) -> s1.getName().compareToIgnoreCase(s2.getName()))
+                .collect(Collectors.toList());
+
+        orderStudent2.forEach(System.out::println);
+        System.out.println("+++++++++++++++++++++++++++++++++++++");
+
+        Stream.of(students)
+                .sorted(Comparator.comparingInt(Student::getAge).thenComparing(Student::getName))
+                .collect(Collectors.toList())
+                .forEach(System.out::println);
+
 
 
 
