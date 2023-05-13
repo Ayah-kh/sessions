@@ -1,11 +1,6 @@
 package Part08;
 
-import java.util.List;
-import java.util.Map;
 import java.util.Optional;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
 
 public class Application {
     static Student[] students = new Student[]{
@@ -19,73 +14,32 @@ public class Application {
 
     public static void main(String[] args) {
 
-        Stream.of(students)
-                .forEach(student -> System.out.println(student));
 
-        Stream.of(students)
-                .map(Student::getName)
-                .forEach(System.out::println);
+        divideV2(4, 0)
+                .map(a -> a * 3)
+                .filter(a -> a % 2 == 0)
+                .ifPresent(System.out::println);
 
-        System.out.println("=============================================");
+        Integer integer = divideV2(4, 0)
+                .map(a -> a * 3)
+                .orElse(0);
+        System.out.println("integer = " + integer);
 
-        Stream.of(students)
-                .filter(Student::isActive)
-                .forEach(System.out::println);
-
-        System.out.println("=============================================");
-
-        Stream<Course> courseStream = Stream.of(students)
-                .flatMap(student -> student.getCourse().stream());
-
-        Stream<Stream<Course>> streamStream = Stream.of(students)
-                .map(student -> student.getCourse().stream());
-
-        List<String> studentsName = Stream.of(students)
-                .map(Student::getName)
-                .collect(Collectors.toList());
-        System.out.println("studentsName = " + studentsName);
-        System.out.println("=============================================");
-
-        Map<Gender, List<Student>> collect = Stream.of(students)
-                .collect(Collectors.groupingBy(Student::getGender));
-
-        System.out.println("collect = " + collect);
-        System.out.println("=============================================");
-
-        Map<Gender, List<String>> collect1 = Stream.of(students)
-                .collect(Collectors.groupingBy(Student::getGender,
-                        Collectors.mapping(Student::getName, Collectors.toList())));
-
-        System.out.println("collect1 = " + collect1);
-
-        System.out.println("=============================================");
-
-        Stream.of(students)
-                .map(Student::getName)
-                .sorted()
-                .forEach(System.out::println);
-
-        Stream<String> stringStream = Stream.of(students)
-                .map(Student::getName);
-
-        int sum = IntStream.rangeClosed(1, 10)
-                .reduce(0, (acc, e) -> acc + e);
-        int sum1 = IntStream.rangeClosed(1, 10).sum();
-        System.out.println("=============================================");
-        System.out.println("sum  = " + sum);
-        System.out.println("sum1 = " + sum1);
-
-
+        Integer integer2 = divideV2(4, 2)
+                .map(a -> a * 4)
+                .orElse(0);
+        System.out.println("integer2 = " + integer2);
 
 
     }
 
-    public static int divide (int a,int b){
-        return a/b;
+    public static int divide(int a, int b) {
+        return a / b;
     }
-    public static Optional<Integer> divideV2 (int a, int b){
-        return b==0?
+
+    public static Optional<Integer> divideV2(int a, int b) {
+        return b == 0 ?
                 Optional.empty()
-                :Optional.of(a/b);
+                : Optional.of(a / b);
     }
 }
