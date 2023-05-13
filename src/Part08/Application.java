@@ -1,6 +1,8 @@
 package Part08;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Application {
@@ -19,6 +21,17 @@ public class Application {
                 .findFirst();
 
         System.out.println("first = " + first);
+
+        Optional<Student> first1 = Stream.of(students)
+                .filter(student -> student.getAge() > 15)
+                .findFirst();
+
+        System.out.println("first1 = " + first1);
+
+        List<Student> orderStudents = Stream.of(students)
+                .sorted()
+                .collect(Collectors.toList());
+
 
 
     }
