@@ -2,6 +2,7 @@ package Part08;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -77,8 +78,14 @@ public class Application {
 
 
 
+    }
 
-
-
+    public static int divide (int a,int b){
+        return a/b;
+    }
+    public static Optional<Integer> divideV2 (int a, int b){
+        return b==0?
+                Optional.empty()
+                :Optional.of(a/b);
     }
 }

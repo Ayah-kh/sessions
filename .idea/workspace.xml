@@ -35,7 +35,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "D:/ayah-labtop/Java/Code/EPICCohort123_001"
+    "last_opened_file_path": "D:/ayah-labtop/Java/Code/session10"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -432,7 +432,21 @@
       <option name="project" value="LOCAL" />
       <updated>1683911196858</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="First Commit">
+      <created>1683996533622</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1683996533622</updated>
+    </task>
+    <task id="LOCAL-00045" summary="First Commit">
+      <created>1683996640403</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1683996640403</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
