@@ -1,6 +1,7 @@
 package Part08;
 
 import java.util.Optional;
+import java.util.stream.Stream;
 
 public class Application {
     static Student[] students = new Student[]{
@@ -13,22 +14,11 @@ public class Application {
     };
 
     public static void main(String[] args) {
+        Optional<Student> first = Stream.of(students)
+                .filter(student -> student.getAge() < 15)
+                .findFirst();
 
-
-        divideV2(4, 0)
-                .map(a -> a * 3)
-                .filter(a -> a % 2 == 0)
-                .ifPresent(System.out::println);
-
-        Integer integer = divideV2(4, 0)
-                .map(a -> a * 3)
-                .orElse(0);
-        System.out.println("integer = " + integer);
-
-        Integer integer2 = divideV2(4, 2)
-                .map(a -> a * 4)
-                .orElse(0);
-        System.out.println("integer2 = " + integer2);
+        System.out.println("first = " + first);
 
 
     }
