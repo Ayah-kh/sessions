@@ -2,6 +2,7 @@ package Part08;
 
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -12,7 +13,7 @@ public class Application {
             Student.of("Mohammad", 25, Gender.MALE, true, Course.MATH, Course.JAVA),
             Student.of("ESA", 27, Gender.MALE, false, Course.MATH, Course.JAVA),
             Student.of("ESRA", 19, Gender.FEMALE, true, Course.MATH, Course.ENGLISH),
-            Student.of("DANA", 40, Gender.FEMALE, true, Course.MATH, Course.ENGLISH, Course.PHYSICS),
+            Student.of("DANA", 20, Gender.FEMALE, true, Course.MATH, Course.ENGLISH, Course.PHYSICS),
             Student.of("RUBA", 22, Gender.FEMALE, true, Course.MATH, Course.PHYSICS)
     };
 
@@ -48,10 +49,17 @@ public class Application {
 
         Stream.of(students)
                 .sorted(Comparator.comparingInt(Student::getAge).thenComparing(Student::getName))
+                .map(student -> student.getName()+": "+student.getAge())
                 .collect(Collectors.toList())
                 .forEach(System.out::println);
 
-
+        Map<Gender, Long> genederCount = Stream.of(students)
+                .collect(Collectors.groupingBy(student -> student.getGender(), Collectors.counting()));
+        System.out.println("genederCount = " + genederCount);
+        Map<Gender, List<String>> collect = Stream.of(students)
+                .collect(Collectors.groupingBy(student -> student.getGender(),
+                        Collectors.mapping(Student::getName, Collectors.toList())));
+        System.out.println("collect = " + collect);
 
 
     }
