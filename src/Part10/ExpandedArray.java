@@ -207,14 +207,14 @@ public class ExpandedArray<T> {
                 );
     }
 
-    public <U> Map<U,ExpandedArray<T>> myGrouping(Function<T,U> keyExtractor){
-        return reduceL(new HashMap<>(),
-                acc->e->{
-                    U key = keyExtractor.apply(e);
-                    acc.compute(key,(k,l)->{
-
-                    })
-
-                });
-    }
+//    public <U> Map<U,ExpandedArray<T>> myGrouping(Function<T,U> keyExtractor){
+//        return reduceL(new HashMap<>(),
+//                acc->e->{
+//                    U key = keyExtractor.apply(e);
+//                    acc.compute(key,(k,l)->{
+//
+//                    })
+//
+//                });
+//    }
 }
