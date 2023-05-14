@@ -19,6 +19,15 @@ public class Application {
         String s2 = numbers.reduceR("0", e -> acc -> "(" + acc + "+" + e + ")");
         System.out.println("s2 = " + s2);
 
+        ExpandedArray<Integer> numBy2 = numbers.myMap(e -> e * 2);
+        numBy2.forEach(System.out::println);
+
+        ExpandedArray<String> stringNum = numbers.myMap(e -> "My number " + e);
+        stringNum.forEach(System.out::println);
+
+        ExpandedArray<Integer> evenNum = numbers.myFilter(e -> e % 2 == 0);
+        evenNum.forEach(System.out::println);
+
 
     }
 }

@@ -192,4 +192,29 @@ public class ExpandedArray<T> {
                 accFunction,
                 i-1);
     }
+
+    public <U> ExpandedArray<U> myMap(Function<T,U> function){
+       return reduceL(new ExpandedArray<U>(),
+                acc->e->acc.addElement(function.apply(e))
+               );
+    }
+
+    public ExpandedArray<T> myFilter (Predicate<T> predicate){
+        return reduceL(new ExpandedArray<T>(),
+                   acc->e->predicate.test(e)?
+                           acc.addElement(e)
+                           :acc
+                );
+    }
+
+    public <U> Map<U,ExpandedArray<T>> myGrouping(Function<T,U> keyExtractor){
+        return reduceL(new HashMap<>(),
+                acc->e->{
+                    U key = keyExtractor.apply(e);
+                    acc.compute(key,(k,l)->{
+
+                    })
+
+                });
+    }
 }
