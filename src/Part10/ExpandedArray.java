@@ -140,7 +140,12 @@ public class ExpandedArray<T> {
 
     private <U> U reduceR(U acc, CBIFunction<T, U, U> accFunction, int i) {
 
-        return i < 0 ? acc : reduceR(accFunction.apply(getElementByIndex(i)).apply(acc), accFunction, i - 1);
+        return i < 0 ?
+                acc :
+                reduceR(
+                        accFunction.apply(getElementByIndex(i)).apply(acc),
+                        accFunction,
+                        i - 1);
 
     }
 
@@ -172,5 +177,19 @@ public class ExpandedArray<T> {
                         accFunction.apply(acc).apply(getElementByIndex(i)),
                         accFunction,
                         i + 1);
+    }
+
+    public <U> U myReduceR(U seed,CBIFunction<T,U,U> accFunction){
+        return myReduceR(seed,accFunction,lastIndex-1);
+
+    }
+
+    private <U> U myReduceR(U acc  , CBIFunction<T,U,U> accFunction, int i) {
+        return i<0
+                ?acc
+                :myReduceR(
+                        accFunction.apply(getElementByIndex(i)).apply(acc),
+                accFunction,
+                i-1);
     }
 }
