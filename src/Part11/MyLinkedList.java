@@ -1,6 +1,7 @@
 package Part11;
 
 import java.util.Optional;
+import java.util.function.Function;
 
 public class MyLinkedList<E> {
     private int size;
@@ -52,22 +53,55 @@ public class MyLinkedList<E> {
                 : Optional.of(removeNode(first));
     }
 
+    public Optional<E> removeLast() {
+
+        return last == null
+                ? Optional.empty()
+                : Optional.of(removeNode(last));
+    }
+
     private E removeNode(Node node) {
         Node nextNode = node.next;
         Node prevNode = node.prev;
 
-        if (prevNode==null)
-            first=nextNode;
+        if (prevNode == null)
+            first = nextNode;
         else
-            prevNode.next=nextNode;
+            prevNode.next = nextNode;
 
-        if (nextNode==null)
-            last=prevNode;
+        if (nextNode == null)
+            last = prevNode;
         else
-            nextNode.prev=prevNode;
+            nextNode.prev = prevNode;
 
         size--;
         return node.data;
+    }
+
+    public <U> U reduceR(U seed, Function<E, Function<U, U>> function) {
+        return reduceR(seed, function, last);
+    }
+
+    private <U> U reduceR(U acc, Function<E, Function<U, U>> function, Node node) {
+        return node == null
+                ? acc
+                : reduceR(function.apply(node.data).apply(acc)
+                , function
+                , node.prev
+        );
+    }
+
+
+    public <U> U reduceL(U seed, Function<U, Function<E, U>> function) {
+        return reduceL(seed, function, first);
+    }
+
+    private <U> U reduceL(U acc, Function<U, Function<E, U>> function, Node node) {
+        return node == null
+                ? acc
+                : reduceL(function.apply(acc).apply(node.data)
+                , function
+                , node.next);
     }
 
     private class Node {
