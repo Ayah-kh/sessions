@@ -18,6 +18,9 @@ public class Application {
         numbers.flatMap(a -> MyLinkedList.of(a - 1, a, a + 1)).forEach(System.out::println);
 
         Integer sum = numbers.reduceL(0, acc -> e -> acc + e);
+        System.out.println("sum = " + sum);
+
+
 
 
     }

@@ -3,13 +3,14 @@ package Part11;
 import java.util.Optional;
 import java.util.function.Consumer;
 import java.util.function.Function;
+import java.util.function.Predicate;
 
 public class MyLinkedList<E> {
     private int size;
     private Node first;
     private Node last;
 
-    public static <E> MyLinkedList<E> of(E...data){
+    public static <E> MyLinkedList<E> of(E... data) {
         MyLinkedList<E> myLinkedList = new MyLinkedList<>();
         for (E datum : data) {
             myLinkedList.addLast(datum);
@@ -18,7 +19,7 @@ public class MyLinkedList<E> {
         return myLinkedList;
     }
 
-    public MyLinkedList<E> add(E data){
+    public MyLinkedList<E> add(E data) {
         return addLast(data);
     }
 
@@ -118,29 +119,33 @@ public class MyLinkedList<E> {
                 , node.next);
     }
 
-    public void forEach(Consumer<E> consumer){
-        Node node=first;
+    public void forEach(Consumer<E> consumer) {
+        Node node = first;
         for (int i = 0; i < size; i++) {
             consumer.accept(node.data);
-            node=node.next;
+            node = node.next;
         }
     }
 
-    public <U>MyLinkedList<U> map(Function<E,U> function){
-        return reduceL(new MyLinkedList<U>(),acc->e->acc.addLast(function.apply(e)));
+    public <U> MyLinkedList<U> map(Function<E, U> function) {
+        return reduceL(new MyLinkedList<U>(), acc -> e -> acc.addLast(function.apply(e)));
     }
 
-    public <U> MyLinkedList<U> flatMap(Function<E,MyLinkedList<U>> function){
+    public <U> MyLinkedList<U> flatMap(Function<E, MyLinkedList<U>> function) {
         return reduceL(new MyLinkedList<>(),
-                aac->e->aac.addAll(function.apply(e)));
+                aac -> e -> aac.addAll(function.apply(e)));
     }
 
     public MyLinkedList<E> addAll(MyLinkedList<E> anotherList) {
-    return anotherList.reduceL(this,acc->e->acc.addLast(e));
+        return anotherList.reduceL(this, acc -> e -> acc.addLast(e));
     }
 
-    public MyLinkedList<E> reversed(){
-        return reduceR(new MyLinkedList<>(),e->acc->acc.addLast(e));
+    public MyLinkedList<E> reversed() {
+        return reduceR(new MyLinkedList<>(), e -> acc -> acc.addLast(e));
+    }
+
+    public boolean allMatch(Predicate<E> predicate) {
+        return reduceL(true, acc -> e -> acc && predicate.test(e));
     }
 
     private class Node {
