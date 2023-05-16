@@ -46,6 +46,21 @@ public class MyLinkedList<E> {
         return this;
     }
 
+    public MyLinkedList<E> addLast(E data){
+        Node oldLast= last;
+        Node addLast= new Node(null,oldLast,data);
+        last=addLast;
+        if (oldLast==null)
+            first=last;
+        else
+            oldLast.next=last;
+
+        size++;
+        return this;
+    }
+
+
+
 
 
 }
