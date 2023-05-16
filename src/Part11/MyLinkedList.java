@@ -9,6 +9,19 @@ public class MyLinkedList<E> {
     private Node first;
     private Node last;
 
+    public static <E> MyLinkedList<E> of(E...data){
+        MyLinkedList<E> myLinkedList = new MyLinkedList<>();
+        for (E datum : data) {
+            myLinkedList.addLast(datum);
+        }
+
+        return myLinkedList;
+    }
+
+    public MyLinkedList<E> add(E data){
+        return addLast(data);
+    }
+
     public Optional<E> first() {
         return first == null
                 ? Optional.empty()

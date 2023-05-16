@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a512523b-c4f3-4868-8774-1977048c9cea" name="Changes" comment="First Commit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Part11/MyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Part11/MyLinkedList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,7 +46,7 @@
       <recent name="Part04" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Part10.Application">
+  <component name="RunManager" selected="Application.Part11.Application">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Part08.Application" />
       <module name="session10" />
@@ -67,19 +66,6 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Part07.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Part06.Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Part06.Application" />
-      <module name="session10" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Part06.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -113,13 +99,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Part11.Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Part11.Application" />
+      <module name="session10" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Part11.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Part11.Application" />
         <item itemvalue="Application.Part10.Application" />
         <item itemvalue="Application.Part09.Application" />
         <item itemvalue="Application.Application" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Part06.Application" />
       </list>
     </recent_temporary>
   </component>
@@ -131,13 +130,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1683096087659</updated>
-    </task>
-    <task id="LOCAL-00017" summary="First Commit">
-      <created>1683726417674</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1683726417674</updated>
     </task>
     <task id="LOCAL-00018" summary="First Commit">
       <created>1683727060990</created>
@@ -475,7 +467,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684223807544</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="First Commit">
+      <created>1684242292085</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1684242292085</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
