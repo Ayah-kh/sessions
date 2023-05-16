@@ -1,5 +1,6 @@
 package Part11;
 
+import java.util.Comparator;
 import java.util.Optional;
 import java.util.function.Consumer;
 import java.util.function.Function;
@@ -106,6 +107,36 @@ public class MyLinkedList<E> {
         );
     }
 
+    public <U> U reduceR(U seed,
+                         Function<E, Function<U, U>> function,
+                         Function<E, Function<U, Boolean>> condition) {
+        return reduceR(seed
+                , function
+                , condition, last);
+    }
+
+    private <U> U reduceR(U acc,
+                          Function<E, Function<U, U>> function,
+                          Function<E, Function<U, Boolean>> condition
+            , Node node) {
+        return node == null || condition.apply(node.data).apply(acc)
+                ? acc
+                : reduceR(function.apply(node.data).apply(acc)
+                , function
+                , condition
+                , node.prev
+        );
+    }
+
+    public boolean anyMatch(Predicate<E> condition) {
+        return !isEmpty() && reduceR(false, e -> acc -> condition.test(e) || acc, e -> acc -> acc);
+
+    }
+
+    public boolean isEmpty() {
+        return size == 0;
+    }
+
 
     public <U> U reduceL(U seed, Function<U, Function<E, U>> function) {
         return reduceL(seed, function, first);
@@ -146,6 +177,20 @@ public class MyLinkedList<E> {
 
     public boolean allMatch(Predicate<E> predicate) {
         return reduceL(true, acc -> e -> acc && predicate.test(e));
+    }
+
+    public Optional<E> min(Comparator<E> comparator) {
+        return isEmpty() ?
+                Optional.empty()
+                : Optional.of(reduceR(last.data,
+                e -> acc -> comparator.compare(acc, e) > 0 ? e : acc));
+    }
+
+    public Optional<E> max(Comparator<E> comparator) {
+        return isEmpty() ?
+                Optional.empty()
+                : Optional.of(reduceR(last.data,
+                e -> acc -> comparator.compare(acc, e) < 0 ? e : acc));
     }
 
     private class Node {
