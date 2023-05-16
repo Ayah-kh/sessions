@@ -1,13 +1,61 @@
 package Part11;
 
-import Part06.MyFunction;
-
 import java.util.Optional;
 
 public class MyLinkedList<E> {
     private int size;
     private Node first;
     private Node last;
+
+    public Optional<E> first() {
+        return first == null
+                ? Optional.empty()
+                : Optional.of(first.data);
+    }
+
+    public Optional<E> last() {
+        return last == null
+                ? Optional.empty()
+                : Optional.of(last.data);
+    }
+
+    public MyLinkedList<E> addFirst(E data) {
+        Node oldFirst = first;
+        Node addNode = new Node(oldFirst, null, data);
+        first = addNode;
+        if (oldFirst == null)
+            last = first;
+        else
+            oldFirst.prev = first;
+
+        size++;
+        return this;
+    }
+
+    public MyLinkedList<E> addLast(E data) {
+        Node oldLast = last;
+        Node addLast = new Node(null, oldLast, data);
+        last = addLast;
+        if (oldLast == null)
+            first = last;
+        else
+            oldLast.next = last;
+
+        size++;
+        return this;
+    }
+
+    public Optional<E> removeFirst() {
+
+        return first == null
+                ? Optional.empty()
+                : Optional.of(removeNode(first));
+    }
+
+    private E removeNode(Node node) {
+        Node next = node.next;
+        Node prev = node.prev;
+    }
 
     private class Node {
         private Node next;
@@ -20,47 +68,6 @@ public class MyLinkedList<E> {
             this.data = data;
         }
     }
-
-    public Optional<E> first(){
-        return first==null
-                ?Optional.empty()
-                :Optional.of(first.data);
-    }
-
-    public Optional<E> last(){
-        return last==null
-                ?Optional.empty()
-                :Optional.of(last.data);
-    }
-
-    public MyLinkedList<E> addFirst(E data){
-        Node oldFirst=first;
-        Node addNode=new Node(oldFirst,null,data);
-        first=addNode;
-        if (oldFirst==null)
-            last=first;
-        else
-            oldFirst.prev=first;
-
-        size++;
-        return this;
-    }
-
-    public MyLinkedList<E> addLast(E data){
-        Node oldLast= last;
-        Node addLast= new Node(null,oldLast,data);
-        last=addLast;
-        if (oldLast==null)
-            first=last;
-        else
-            oldLast.next=last;
-
-        size++;
-        return this;
-    }
-
-
-
 
 
 }

@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a512523b-c4f3-4868-8774-1977048c9cea" name="Changes" comment="First Commit">
-      <change afterPath="$PROJECT_DIR$/src/Part11/MyLinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Part11/MyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Part11/MyLinkedList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,20 +130,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1683096087659</updated>
-    </task>
-    <task id="LOCAL-00012" summary="First Commit">
-      <created>1683443282507</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1683443282507</updated>
-    </task>
-    <task id="LOCAL-00013" summary="First Commit">
-      <created>1683444581077</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1683444581077</updated>
     </task>
     <task id="LOCAL-00014" summary="First Commit">
       <created>1683722517305</created>
@@ -475,7 +460,21 @@
       <option name="project" value="LOCAL" />
       <updated>1684221071384</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="First Commit">
+      <created>1684221853575</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1684221853575</updated>
+    </task>
+    <task id="LOCAL-00062" summary="First Commit">
+      <created>1684222165492</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1684222165492</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
