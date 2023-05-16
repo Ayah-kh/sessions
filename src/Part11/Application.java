@@ -3,15 +3,21 @@ package Part11;
 public class Application {
 
     public static void main(String[] args) {
-        MyLinkedList<Integer> myLinkedList=new MyLinkedList<>();
-        myLinkedList.add(5);
-        myLinkedList.add(8);
-        myLinkedList.add(9);
-        myLinkedList.add(10);
-        myLinkedList.add(11);
-        myLinkedList.add(15);
+        MyLinkedList<Integer> numbers = new MyLinkedList<>();
+        numbers.add(10);
+        numbers.add(20);
+        numbers.add(30);
+        numbers.add(40);
+        numbers.add(50);
 
-        myLinkedList.forEach(System.out::println);
+        numbers.forEach(System.out::println);
+
+        numbers.map(a -> a * 2).forEach(System.out::println);
+        System.out.println("==============================");
+
+        numbers.flatMap(a -> MyLinkedList.of(a - 1, a, a + 1)).forEach(System.out::println);
+
+        Integer sum = numbers.reduceL(0, acc -> e -> acc + e);
 
 
     }

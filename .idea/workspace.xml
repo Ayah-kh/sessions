@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a512523b-c4f3-4868-8774-1977048c9cea" name="Changes" comment="First Commit">
-      <change beforePath="$PROJECT_DIR$/src/Part11/MyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Part11/MyLinkedList.java" afterDir="false" />
-    </list>
+    <list default="true" id="a512523b-c4f3-4868-8774-1977048c9cea" name="Changes" comment="First Commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -130,13 +128,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1683096087659</updated>
-    </task>
-    <task id="LOCAL-00018" summary="First Commit">
-      <created>1683727060990</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1683727060990</updated>
     </task>
     <task id="LOCAL-00019" summary="First Commit">
       <created>1683732039770</created>
@@ -474,7 +465,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684242292085</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="First Commit">
+      <created>1684243050155</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1684243050155</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
