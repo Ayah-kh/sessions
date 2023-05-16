@@ -1,6 +1,7 @@
 package Part11;
 
 import java.util.Optional;
+import java.util.function.Consumer;
 import java.util.function.Function;
 
 public class MyLinkedList<E> {
@@ -102,6 +103,31 @@ public class MyLinkedList<E> {
                 : reduceL(function.apply(acc).apply(node.data)
                 , function
                 , node.next);
+    }
+
+    public void forEach(Consumer<E> consumer){
+        Node node=first;
+        for (int i = 0; i < size; i++) {
+            consumer.accept(node.data);
+            node=node.next;
+        }
+    }
+
+    public <U>MyLinkedList<U> map(Function<E,U> function){
+        return reduceL(new MyLinkedList<U>(),acc->e->acc.addLast(function.apply(e)));
+    }
+
+    public <U> MyLinkedList<U> flatMap(Function<E,MyLinkedList<U>> function){
+        return reduceL(new MyLinkedList<>(),
+                aac->e->aac.addAll(function.apply(e)));
+    }
+
+    public MyLinkedList<E> addAll(MyLinkedList<E> anotherList) {
+    return anotherList.reduceL(this,acc->e->acc.addLast(e));
+    }
+
+    public MyLinkedList<E> reversed(){
+        return reduceR(new MyLinkedList<>(),e->acc->acc.addLast(e));
     }
 
     private class Node {
