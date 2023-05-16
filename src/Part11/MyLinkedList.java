@@ -53,8 +53,21 @@ public class MyLinkedList<E> {
     }
 
     private E removeNode(Node node) {
-        Node next = node.next;
-        Node prev = node.prev;
+        Node nextNode = node.next;
+        Node prevNode = node.prev;
+
+        if (prevNode==null)
+            first=nextNode;
+        else
+            prevNode.next=nextNode;
+
+        if (nextNode==null)
+            last=prevNode;
+        else
+            nextNode.prev=prevNode;
+
+        size--;
+        return node.data;
     }
 
     private class Node {
