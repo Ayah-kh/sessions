@@ -1,6 +1,8 @@
 package Part11;
 
 import java.util.Optional;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public class Application {
 
@@ -39,7 +41,20 @@ public class Application {
         System.out.println("__________________________________");
         System.out.println("min = " + min);
         System.out.println("max = " + max);
+        System.out.println("__________________________________");
+        numbers.filter(a->a>30)
+                .forEach(System.out::println);
 
+        System.out.println("__________________________________");
+        Stream.iterate(1,a->a+1)
+                .limit(20)
+                .forEach(System.out::println);
 
+        System.out.println( range(1, 10).sum());
+
+    }
+
+    public static IntStream range(int from, int toInclude){
+       return IntStream.iterate(from,acc->acc<=toInclude,a->a+1);
     }
 }

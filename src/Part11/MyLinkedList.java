@@ -193,6 +193,10 @@ public class MyLinkedList<E> {
                 e -> acc -> comparator.compare(acc, e) < 0 ? e : acc));
     }
 
+    public MyLinkedList<E> filter(Predicate<E> predicate){
+        return reduceL(new MyLinkedList<>(),
+                acc->e->predicate.test(e)?acc.add(e):acc);
+    }
     private class Node {
         private Node next;
         private Node prev;
