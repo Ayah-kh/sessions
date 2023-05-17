@@ -52,6 +52,8 @@ public class Application {
 
         System.out.println( range(1, 10).sum());
 
+        numbers.stream().forEach(System.out::println);
+
     }
 
     public static IntStream range(int from, int toInclude){

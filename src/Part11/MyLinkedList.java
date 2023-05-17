@@ -1,10 +1,12 @@
 package Part11;
 
 import java.util.Comparator;
+import java.util.Objects;
 import java.util.Optional;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
+import java.util.stream.Stream;
 
 public class MyLinkedList<E> {
     private int size;
@@ -196,6 +198,31 @@ public class MyLinkedList<E> {
     public MyLinkedList<E> filter(Predicate<E> predicate){
         return reduceL(new MyLinkedList<>(),
                 acc->e->predicate.test(e)?acc.add(e):acc);
+    }
+
+    public <U> MyLinkedList<Tuple<E,U>> zip(MyLinkedList<U> anotherList){
+        Node eFirst=first;
+        Node uFirst=(Node) anotherList.first;
+
+        return zip(new MyLinkedList<Tuple<E,U>>(),eFirst,uFirst);
+
+
+
+
+    }
+
+    private <U> MyLinkedList<Tuple<E,U>> zip
+            (MyLinkedList<Tuple<E,U>> acc, Node eNode, Node uNode) {
+        return eNode==null||uNode==null
+                ?acc
+                :zip(acc.add(new Tuple<E,U>(eNode.data,(U)uNode.data))
+                ,eNode.next,uNode.next);
+    }
+
+    public Stream<E> stream(){
+        return Stream.iterate(first,n->n!=null, n->n.next)
+                .map(n->n.data);
+
     }
     private class Node {
         private Node next;
