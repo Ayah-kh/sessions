@@ -54,6 +54,13 @@ public class Application {
 
         numbers.stream().forEach(System.out::println);
 
+        MyLinkedList<Integer> ids=MyLinkedList.of(1000,1001,1002,1003);
+        MyLinkedList<String> name=MyLinkedList.of("Mohammed","Ahmad","Mosa");
+        MyLinkedList<Tuple<Integer, String>> zip = ids.zip(name);
+
+        zip.forEach(System.out::println);
+
+
     }
 
     public static IntStream range(int from, int toInclude){

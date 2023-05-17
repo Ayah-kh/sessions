@@ -205,11 +205,9 @@ public class MyLinkedList<E> {
         Node uFirst=(Node) anotherList.first;
 
         return zip(new MyLinkedList<Tuple<E,U>>(),eFirst,uFirst);
-
-
-
-
     }
+
+
 
     private <U> MyLinkedList<Tuple<E,U>> zip
             (MyLinkedList<Tuple<E,U>> acc, Node eNode, Node uNode) {
