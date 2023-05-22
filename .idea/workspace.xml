@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a512523b-c4f3-4868-8774-1977048c9cea" name="Changes" comment="First Commit">
-      <change afterPath="$PROJECT_DIR$/src/Part12/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Part12/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Part12/CreatingThreadApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +48,7 @@
       <recent name="Part04" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Part11.Application">
+  <component name="RunManager" selected="Application.CreatingThreadApplication">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Part08.Application" />
       <module name="session10" />
@@ -62,12 +62,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Part07.Main" />
+    <configuration name="CreatingThreadApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Part12.CreatingThreadApplication" />
       <module name="session10" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Part07.*" />
+          <option name="PATTERN" value="Part12.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -116,11 +116,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CreatingThreadApplication" />
         <item itemvalue="Application.Part11.Application" />
         <item itemvalue="Application.Part10.Application" />
         <item itemvalue="Application.Part09.Application" />
         <item itemvalue="Application.Application" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -132,13 +132,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1683096087659</updated>
-    </task>
-    <task id="LOCAL-00025" summary="First Commit">
-      <created>1683788781218</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1683788781218</updated>
     </task>
     <task id="LOCAL-00026" summary="First Commit">
       <created>1683789066739</created>
@@ -476,7 +469,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684306249001</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="First Commit">
+      <created>1684758345158</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1684758345159</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
