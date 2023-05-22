@@ -11,13 +11,14 @@ public class SimpleCounter {
         counter--;
     }
 
-    public static void main(String[] args) {
-        SimpleCounter simpleCounter=new SimpleCounter();\
-        int numberOfThreads=3;
+    public static void main(String[] args) throws InterruptedException {
+        SimpleCounter simpleCounter=new SimpleCounter();
+        int numberOfThreads=10;
 
         for (int i = 0; i <numberOfThreads ; i++) {
             new Thread(()->simpleCounter.inc()).start();
-
         }
+        Thread.sleep(2000);
+        System.out.println("simpleCounter.counter = " + simpleCounter.counter);
     }
 }
