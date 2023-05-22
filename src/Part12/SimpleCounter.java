@@ -5,11 +5,11 @@ import java.util.concurrent.CountDownLatch;
 public class SimpleCounter {
     private int counter;
 
-    public void inc(){
+    public synchronized void inc(){
         counter++;
     }
 
-    public void dec(){
+    public synchronized void dec(){
         counter--;
     }
 
@@ -24,6 +24,11 @@ public class SimpleCounter {
                 for (int i1 = 0; i1 < numberOfIteration; i1++) {
 
                     simpleCounter.inc();
+                    simpleCounter.dec();
+
+                    if (simpleCounter.counter!=0){
+                        System.out.printf("Not Expexted value %d \n",simpleCounter.counter);
+                    }
                 }
                 downLatch.countDown();
             }).start();
