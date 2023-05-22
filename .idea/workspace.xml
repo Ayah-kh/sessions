@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a512523b-c4f3-4868-8774-1977048c9cea" name="Changes" comment="First Commit">
-      <change afterPath="$PROJECT_DIR$/src/Part12/SimpleCounter2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Part12/SimpleCounterStatic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Part12/SimpleCounter2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Part12/SimpleCounter2.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +46,7 @@
       <recent name="Part07" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Part12" />
       <recent name="Part04" />
     </key>
   </component>
@@ -132,13 +134,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1683096087659</updated>
-    </task>
-    <task id="LOCAL-00032" summary="First Commit">
-      <created>1683875161984</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1683875161984</updated>
     </task>
     <task id="LOCAL-00033" summary="First Commit">
       <created>1683876695362</created>
@@ -476,7 +471,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684762691933</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="First Commit">
+      <created>1684763021412</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1684763021412</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

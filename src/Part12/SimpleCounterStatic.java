@@ -1,0 +1,38 @@
+package Part12;
+
+import java.util.concurrent.CountDownLatch;
+
+public class SimpleCounterStatic {
+    private static int counter;
+
+    public void inc(){
+        counter++;
+    }
+
+    public void dec(){
+        counter--;
+    }
+
+    public static void main(String[] args) throws InterruptedException {
+        SimpleCounterStatic simpleCounterStatic = new SimpleCounterStatic();
+        SimpleCounterStatic simpleCounterStatic2 = new SimpleCounterStatic();
+        int numberOfThreads = 1000;
+        int numberOfIteration = 1000;
+        CountDownLatch downLatch = new CountDownLatch(numberOfThreads);
+
+        for (int i = 0; i < numberOfThreads; i++) {
+            new Thread(() -> {
+                for (int j = 0; j < numberOfIteration; j++) {
+                    simpleCounterStatic.inc();
+                    simpleCounterStatic2.inc();
+                }
+                downLatch.countDown();
+            }).start();
+        }
+        downLatch.await();
+        System.out.println("simpleCounter.counter = " );
+    }
+
+
+}
+

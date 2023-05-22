@@ -15,8 +15,10 @@ public class SimpleCounter2 {
             new Thread(() -> {
                 for (int j = 0; j < numberOfIteration; j++) {
 
-                    simpleCounter.inc();
-                    simpleCounter.dec();
+                    synchronized (simpleCounter) {
+                        simpleCounter.inc();
+                        simpleCounter.dec();
+                    }
 
 //                    simpleCounter.incAndDec();
 
