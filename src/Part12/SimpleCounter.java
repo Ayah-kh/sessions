@@ -13,6 +13,11 @@ public class SimpleCounter {
         counter--;
     }
 
+    public synchronized void incAndDec(){
+        counter++;
+        counter--;
+    }
+
     public static void main(String[] args) throws InterruptedException {
         SimpleCounter simpleCounter=new SimpleCounter();
         int numberOfThreads=1000;
@@ -23,8 +28,10 @@ public class SimpleCounter {
             new Thread(()-> {
                 for (int i1 = 0; i1 < numberOfIteration; i1++) {
 
-                    simpleCounter.inc();
-                    simpleCounter.dec();
+//                    simpleCounter.inc();
+//                    simpleCounter.dec();
+
+                    simpleCounter.incAndDec();
 
                     if (simpleCounter.counter!=0){
                         System.out.printf("Not Expexted value %d \n",simpleCounter.counter);
