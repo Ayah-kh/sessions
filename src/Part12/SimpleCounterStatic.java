@@ -23,7 +23,7 @@ public class SimpleCounterStatic {
         for (int i = 0; i < numberOfThreads; i++) {
             new Thread(() -> {
                 for (int j = 0; j < numberOfIteration; j++) {
-                    synchronized () {
+                    synchronized (simpleCounterStatic) {
                         simpleCounterStatic.inc();
                         simpleCounterStatic2.inc();
                     }
