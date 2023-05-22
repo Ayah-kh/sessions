@@ -9,7 +9,7 @@ public class SimpleCounterStatic {
         counter++;
     }
 
-    public void dec(){
+    public synchronized void dec(){
         counter--;
     }
 
@@ -23,14 +23,16 @@ public class SimpleCounterStatic {
         for (int i = 0; i < numberOfThreads; i++) {
             new Thread(() -> {
                 for (int j = 0; j < numberOfIteration; j++) {
-                    simpleCounterStatic.inc();
-                    simpleCounterStatic2.inc();
+                    synchronized () {
+                        simpleCounterStatic.inc();
+                        simpleCounterStatic2.inc();
+                    }
                 }
                 downLatch.countDown();
             }).start();
         }
         downLatch.await();
-        System.out.println("simpleCounter.counter = " );
+        System.out.println("simpleCounter.counter = "+SimpleCounterStatic.counter );
     }
 
 
