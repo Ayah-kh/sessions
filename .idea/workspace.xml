@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a512523b-c4f3-4868-8774-1977048c9cea" name="Changes" comment="First Commit">
-      <change afterPath="$PROJECT_DIR$/src/Part12/AtomicApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Part12/JoinApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Part12/JoinApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +49,7 @@
       <recent name="Part04" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.AtomicApplication">
+  <component name="RunManager" selected="Application.JoinApplication">
     <configuration name="AtomicApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Part12.AtomicApplication" />
       <module name="session10" />
@@ -76,8 +76,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SimpleCounter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Part12.SimpleCounter" />
+    <configuration name="JoinApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Part12.JoinApplication" />
       <module name="session10" />
       <extension name="coverage">
         <pattern>
@@ -117,11 +117,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.JoinApplication" />
         <item itemvalue="Application.AtomicApplication" />
         <item itemvalue="Application.CheckAndDoActionApplication" />
         <item itemvalue="Application.SimpleCounterStatic" />
         <item itemvalue="Application.SimpleCounter2" />
-        <item itemvalue="Application.SimpleCounter" />
       </list>
     </recent_temporary>
   </component>
@@ -133,13 +133,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1683096087659</updated>
-    </task>
-    <task id="LOCAL-00037" summary="First Commit">
-      <created>1683894084657</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1683894084657</updated>
     </task>
     <task id="LOCAL-00038" summary="First Commit">
       <created>1683900615805</created>
@@ -477,7 +470,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684841269167</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="First Commit">
+      <created>1684844548721</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1684844548721</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
