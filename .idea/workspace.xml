@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a512523b-c4f3-4868-8774-1977048c9cea" name="Changes" comment="First Commit">
+      <change afterPath="$PROJECT_DIR$/src/Part12/CounterUsingStream.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Part12/JoinApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Part12/JoinApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Part12/CountDownLatchApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Part12/CountDownLatchApp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +50,7 @@
       <recent name="Part04" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.JoinApplication">
+  <component name="RunManager" selected="Application.CounterUsingStream">
     <configuration name="AtomicApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Part12.AtomicApplication" />
       <module name="session10" />
@@ -76,6 +77,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CountDownLatchApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Part12.CountDownLatchApp" />
+      <module name="session10" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Part12.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CounterUsingStream" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Part12.CounterUsingStream" />
+      <module name="session10" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Part12.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="JoinApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Part12.JoinApplication" />
       <module name="session10" />
@@ -89,39 +116,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SimpleCounter2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Part12.SimpleCounter2" />
-      <module name="session10" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Part12.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SimpleCounterStatic" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Part12.SimpleCounterStatic" />
-      <module name="session10" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Part12.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CounterUsingStream" />
+        <item itemvalue="Application.CountDownLatchApp" />
         <item itemvalue="Application.JoinApplication" />
         <item itemvalue="Application.AtomicApplication" />
         <item itemvalue="Application.CheckAndDoActionApplication" />
-        <item itemvalue="Application.SimpleCounterStatic" />
-        <item itemvalue="Application.SimpleCounter2" />
       </list>
     </recent_temporary>
   </component>
@@ -133,13 +134,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1683096087659</updated>
-    </task>
-    <task id="LOCAL-00038" summary="First Commit">
-      <created>1683900615805</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1683900615805</updated>
     </task>
     <task id="LOCAL-00039" summary="First Commit">
       <created>1683902709029</created>
@@ -477,7 +471,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684844548721</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="First Commit">
+      <created>1684846192395</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1684846192396</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
