@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a512523b-c4f3-4868-8774-1977048c9cea" name="Changes" comment="First Commit">
-      <change afterPath="$PROJECT_DIR$/src/Part12/CheckAndDoActionApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Part12/AtomicApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Part12/SimpleCounterStatic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Part12/SimpleCounterStatic.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,9 +49,9 @@
       <recent name="Part04" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.CheckAndDoActionApplication">
-    <configuration name="CheckAndDoActionApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Part12.CheckAndDoActionApplication" />
+  <component name="RunManager" selected="Application.AtomicApplication">
+    <configuration name="AtomicApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Part12.AtomicApplication" />
       <module name="session10" />
       <extension name="coverage">
         <pattern>
@@ -64,8 +63,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CreatingThreadUsingRunnable" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Part12.CreatingThreadUsingRunnable" />
+    <configuration name="CheckAndDoActionApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Part12.CheckAndDoActionApplication" />
       <module name="session10" />
       <extension name="coverage">
         <pattern>
@@ -118,11 +117,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.AtomicApplication" />
         <item itemvalue="Application.CheckAndDoActionApplication" />
         <item itemvalue="Application.SimpleCounterStatic" />
         <item itemvalue="Application.SimpleCounter2" />
         <item itemvalue="Application.SimpleCounter" />
-        <item itemvalue="Application.CreatingThreadUsingRunnable" />
       </list>
     </recent_temporary>
   </component>
@@ -134,13 +133,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1683096087659</updated>
-    </task>
-    <task id="LOCAL-00036" summary="First Commit">
-      <created>1683892667409</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1683892667409</updated>
     </task>
     <task id="LOCAL-00037" summary="First Commit">
       <created>1683894084657</created>
@@ -478,7 +470,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684764876351</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="First Commit">
+      <created>1684841269166</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1684841269167</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
