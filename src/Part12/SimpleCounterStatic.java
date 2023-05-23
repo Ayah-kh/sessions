@@ -5,14 +5,6 @@ import java.util.concurrent.CountDownLatch;
 public class SimpleCounterStatic {
     private static int counter;
 
-    public void inc(){
-        counter++;
-    }
-
-    public synchronized void dec(){
-        counter--;
-    }
-
     public static void main(String[] args) throws InterruptedException {
         SimpleCounterStatic simpleCounterStatic = new SimpleCounterStatic();
         SimpleCounterStatic simpleCounterStatic2 = new SimpleCounterStatic();
@@ -32,7 +24,15 @@ public class SimpleCounterStatic {
             }).start();
         }
         downLatch.await();
-        System.out.println("simpleCounter.counter = "+SimpleCounterStatic.counter );
+        System.out.println("simpleCounter.counter = " + SimpleCounterStatic.counter);
+    }
+
+    public void inc() {
+        counter++;
+    }
+
+    public synchronized void dec() {
+        counter--;
     }
 
 
