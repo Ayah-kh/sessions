@@ -18,7 +18,6 @@ public class CounterUsingStream {
         CountDownLatch downLatch = new CountDownLatch(numberOfThreads);
 
         IntStream.rangeClosed(1,numberOfThreads)
-                .mapToObj(i)
 
 
 
