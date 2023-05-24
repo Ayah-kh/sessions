@@ -20,7 +20,9 @@ public class CounterUsingStream {
         IntStream.rangeClosed(1,numberOfThreads)
                 .<MyRunnable> mapToObj(i-> counterApp::inc)
                 .map(myRunnable -> myRunnable.repeat(numberOfIteration))
-                .
+                .map(myRunnable -> myRunnable.andThen(downLatch::countDown))
+                .map(Thread::new)
+                .forEach(Thread::start);
 
 
 
@@ -33,6 +35,13 @@ public class CounterUsingStream {
            return ()-> IntStream.rangeClosed(1,numberOfIteration)
                     .forEach(i->run());
 
+        }
+
+        default MyRunnable andThen(MyRunnable after){
+            return ()->{
+                run();
+                after.run();
+            };
         }
 
     }
