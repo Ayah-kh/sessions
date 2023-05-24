@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a512523b-c4f3-4868-8774-1977048c9cea" name="Changes" comment="First Commit">
+      <change afterPath="$PROJECT_DIR$/src/Part12/CycleBarrierApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Part12/CounterUsingStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Part12/CounterUsingStream.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,22 +50,9 @@
       <recent name="Part04" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.CounterUsingStream">
+  <component name="RunManager" selected="Application.CycleBarrierApp">
     <configuration name="AtomicApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Part12.AtomicApplication" />
-      <module name="session10" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Part12.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CheckAndDoActionApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Part12.CheckAndDoActionApplication" />
       <module name="session10" />
       <extension name="coverage">
         <pattern>
@@ -101,6 +90,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CycleBarrierApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Part12.CycleBarrierApp" />
+      <module name="session10" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Part12.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="JoinApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Part12.JoinApplication" />
       <module name="session10" />
@@ -116,11 +118,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CycleBarrierApp" />
         <item itemvalue="Application.CounterUsingStream" />
         <item itemvalue="Application.CountDownLatchApp" />
         <item itemvalue="Application.JoinApplication" />
         <item itemvalue="Application.AtomicApplication" />
-        <item itemvalue="Application.CheckAndDoActionApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -132,13 +134,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1683096087659</updated>
-    </task>
-    <task id="LOCAL-00042" summary="First Commit">
-      <created>1683907650415</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1683907650415</updated>
     </task>
     <task id="LOCAL-00043" summary="First Commit">
       <created>1683911196858</created>
@@ -476,7 +471,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684911192472</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="First Commit">
+      <created>1684911670264</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1684911670264</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

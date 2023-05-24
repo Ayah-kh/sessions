@@ -10,7 +10,7 @@ public class CounterUsingStream {
     private void inc(){
         counter.incrementAndGet();
     }
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         CounterUsingStream counterApp = new CounterUsingStream();
         int numberOfThreads = 1000;
@@ -24,8 +24,8 @@ public class CounterUsingStream {
                 .map(Thread::new)
                 .forEach(Thread::start);
 
-
-
+        downLatch.await();
+        System.out.println(counterApp.counter);
 
     }
 
