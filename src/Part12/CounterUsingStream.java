@@ -18,9 +18,22 @@ public class CounterUsingStream {
         CountDownLatch downLatch = new CountDownLatch(numberOfThreads);
 
         IntStream.rangeClosed(1,numberOfThreads)
+                .<MyRunnable> mapToObj(i-> counterApp::inc)
+                .map(myRunnable -> myRunnable.repeat(numberOfIteration))
+                .
 
 
 
+
+    }
+
+    private static interface MyRunnable extends Runnable{
+
+        default MyRunnable repeat(int numberOfIteration){
+           return ()-> IntStream.rangeClosed(1,numberOfIteration)
+                    .forEach(i->run());
+
+        }
 
     }
 }
