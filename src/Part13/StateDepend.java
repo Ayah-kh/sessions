@@ -14,7 +14,7 @@ public class StateDepend {
 
         Iterator<Integer> numIterator = numbers.iterator();
 
-        while (numIterator.hasNext()){
+        while (true){
             try {
                 Integer num = numIterator.next();
                 System.out.println("num = " + num);
